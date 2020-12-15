@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace Final_Project
 {
@@ -12,19 +14,20 @@ namespace Final_Project
         public static void write(Customer cus)
         {
             string filname = "D:\\Users\\jfleming2\\DeerHarvest.xml";
-            XmlTextWriter xmlWriter = new XmlTextWriter(filname, null);
+            TextWriter xmlWriter = new StreamWriter(filname);
 
-            xmlWriter.WriteStartDocument();
-            xmlWriter.WriteStartElement("Customer");
-            xmlWriter.WriteElementString("Name", cus.getFname() + " " + cus.getLname());
-            xmlWriter.WriteElementString("License", cus.getLicense());
-            xmlWriter.WriteElementString("Tag", cus.getTag());
-            xmlWriter.WriteElementString("Zone", cus.getZone());
+            XmlSerializer writer = new XmlSerializer(cus.GetType());
+            writer.Serialize(xmlWriter, cus);
+
+            xmlWriter.WriteLine("Customer");
+            xmlWriter.WriteLine("Name", cus.getFname() + " " + cus.getLname());
+            xmlWriter.WriteLine("License", cus.getLicense());
+            xmlWriter.WriteLine("Tag", cus.getTag());
+            xmlWriter.WriteLine("Zone", cus.getZone());
            
-            xmlWriter.WriteStartElement("Doe");
-            xmlWriter.WriteElementString("Weight",cus.getDeer().getWeightXML());
-            xmlWriter.WriteEndElement();
-            xmlWriter.WriteEndDocument();
+            xmlWriter.WriteLine("Doe");
+            xmlWriter.WriteLine("Weight",cus.getDeer().getWeightXML());
+         
             xmlWriter.Close();
         }
     }

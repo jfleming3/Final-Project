@@ -11,12 +11,12 @@ namespace Final_Project
     public class Customer
     {
 
-        private string fname;
-        private string lname;
-        private string license;
-        private string tag;
-        private string zone;
-        Deer deer = new Deer();
+        public string fname;
+        public string lname;
+        public string license;
+        public string tag;
+        public string zone;
+        public Deer deer = new Deer();
         public Customer()
         {
             fname = null;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.Xml;
 
 namespace Final_Project
 {
-    [Serializable()]
+   [Serializable()]
     public class Buck : Deer
     {
         private int rackpoints;
@@ -25,12 +26,12 @@ namespace Final_Project
         {
         }
 
-        override
-        public void write(ref XmlTextWriter writer)
+       
+        public void write(ref TextWriter writer)
         {
-            writer.WriteElementString("Rack Points", Convert.ToString(rackpoints));
-            writer.WriteElementString("Inside Spread", Convert.ToString(inside_spread));
-            writer.WriteElementString("mainbeam", Convert.ToString(mainbeam));
+            writer.WriteLine("Rack Points", Convert.ToString(rackpoints));
+            writer.WriteLine("Inside Spread", Convert.ToString(inside_spread));
+            writer.WriteLine("mainbeam", Convert.ToString(mainbeam));
         }
 
 

@@ -68,11 +68,11 @@ namespace Final_Project
         private void button1_Click(object sender, EventArgs e)
         {
             Form5 f5 = new Form5();
-
-            int points = Int32.Parse(POINTS.Text);          
-            double spread = Convert.ToDouble(SPREAD.Text);
-            double beam = Convert.ToDouble(BEAM.Text);
-            double weight = Convert.ToDouble(WEIGHT.Text);
+     
+               int points = Int32.Parse(POINTS.Text);
+               double spread = Convert.ToDouble(SPREAD.Text);
+               double beam = Convert.ToDouble(BEAM.Text);
+               double weight = Convert.ToDouble(WEIGHT.Text);
 
             Deer buck = new Buck(points,spread,beam);
             buck.setWeight(weight);

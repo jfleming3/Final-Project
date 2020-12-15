@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace Final_Project
 {
-    [Serializable()]
+    [XmlInclude(typeof(Buck))]
+    [XmlInclude(typeof(Doe))]
     public class Deer
     {
 
          string tag;
          double weight;
-
-        public virtual void write(ref XmlTextWriter writer)
+/*
+        public virtual void write(ref TextWriter writer)
         {
 
         }
-
+*/
         public void setTag(string ntag)
         {
             tag = ntag;
