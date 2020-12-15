@@ -11,9 +11,9 @@ namespace Final_Project
    [Serializable()]
     public class Buck : Deer
     {
-        private int rackpoints;
-        private double inside_spread;
-        private double mainbeam;
+        public int rackpoints;
+        public double inside_spread;
+        public double mainbeam;
 
         public Buck(int rp, double spread, double beam)
         {

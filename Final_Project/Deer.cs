@@ -14,8 +14,8 @@ namespace Final_Project
     public class Deer
     {
 
-         string tag;
-         double weight;
+        public string tag;
+        public double weight;
 /*
         public virtual void write(ref TextWriter writer)
         {
