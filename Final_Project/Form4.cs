@@ -15,8 +15,6 @@ namespace Final_Project
 
         Customer cus = new Customer();
 
-        //change in sprint 2
-        //get data from previous form 
         public void cusInfo(Customer ncus)
         {
             cus = ncus;
@@ -44,9 +42,13 @@ namespace Final_Project
         private void button1_Click(object sender, EventArgs e)
         {
             Form5 f5 = new Form5();
-            cus.getDeer().setWeight(Convert.ToDouble(Weight.Text));
+            Deer temp = cus.getDeer();
+            temp.setWeight(Convert.ToDouble(Weight.Text));
+            cus.setDeer(temp);
             this.Hide();
+            DoeXMLWriter.write(cus);
             f5.Show();
+
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
+    [Serializable()]
     public class Doe : Deer
     {
-       //for future use if more information on a Doe is wanted when registering a deer 
-
+       //for future implementation if more info on a doe is wanted in the registration process
     }
 }

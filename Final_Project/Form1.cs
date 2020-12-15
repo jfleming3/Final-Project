@@ -65,9 +65,9 @@ namespace Final_Project
                 Deer deerB = new Buck();
                 Customer cus = new Customer(fname, lname, license, tag, zone, deerB);
 
-                CustomerController control = new CustomerController(cus);
+                // CustomerController control = new CustomerController(cus);
 
-                
+                f3.cusInfo(cus);
                 this.Hide();
                 f3.Show();
             } else if (DOE.Checked)
@@ -77,8 +77,8 @@ namespace Final_Project
                 Deer deerD = new Doe();
                 Customer cus = new Customer(fname, lname, license, tag, zone, deerD);
 
-                CustomerController control = new CustomerController(cus);
-
+                // CustomerController control = new CustomerController(cus);
+                f4.cusInfo(cus);
                 this.Hide();
                 f4.Show();
             } 

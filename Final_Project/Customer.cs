@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
+    [Serializable()]
     public class Customer
     {
 

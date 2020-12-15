@@ -17,8 +17,6 @@ namespace Final_Project
             InitializeComponent();
         }
 
-        //bad design
-        //change in sprint 2
         Customer cus = new Customer();
 
         public void cusInfo(Customer ncus)
@@ -70,7 +68,6 @@ namespace Final_Project
         private void button1_Click(object sender, EventArgs e)
         {
             Form5 f5 = new Form5();
-            
 
             int points = Int32.Parse(POINTS.Text);          
             double spread = Convert.ToDouble(SPREAD.Text);
@@ -80,7 +77,7 @@ namespace Final_Project
             Deer buck = new Buck(points,spread,beam);
             buck.setWeight(weight);
             cus.setDeer(buck);
-
+            BuckXMLwriter.write(cus);
             this.Hide();
             f5.Show();
         }

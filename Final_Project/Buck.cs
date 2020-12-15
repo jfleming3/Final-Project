@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Final_Project
 {
+    [Serializable()]
     public class Buck : Deer
     {
         private int rackpoints;
@@ -22,6 +24,16 @@ namespace Final_Project
         public Buck()
         {
         }
+
+        override
+        public void write(ref XmlTextWriter writer)
+        {
+            writer.WriteElementString("Rack Points", Convert.ToString(rackpoints));
+            writer.WriteElementString("Inside Spread", Convert.ToString(inside_spread));
+            writer.WriteElementString("mainbeam", Convert.ToString(mainbeam));
+        }
+
+
 
         public void setRack(int rp)
         {
