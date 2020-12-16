@@ -19,10 +19,9 @@ namespace Final_Project.Tests
         {
             Form3 f3 = new Form3();
 
-            Customer cus = new Customer();
         
             Assert.IsInstanceOfType(f3.getf3Cus(),typeof(Customer));
-           // Assert.AreEqual(cus, f3.getf3Cus());
+           
         }
 
 
