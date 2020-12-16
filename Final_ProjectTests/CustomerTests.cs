@@ -12,20 +12,47 @@ namespace Final_Project.Tests
     public class CustomerTests
     {
        
-
-       
-
-        
-
         [TestMethod()]
         public void getLnameTest()
         {
-            
-            Assert.Fail();
+
+            Customer cus = new Customer();
+            cus.setLname("Fleming");
+
+            string lname = cus.getLname();
+
+            Assert.AreEqual("Fleming", lname);
+
+
         }
 
-       
+        [TestMethod()]
+        public void getFnameTest()
+        {
 
-        
+            Customer cus = new Customer();
+            cus.setFname("Justin");
+
+            string fname = cus.getFname();
+
+            Assert.AreEqual("Justin", fname);
+
+
+        }
+        [TestMethod()]
+        public void getTagTest()
+        {
+
+            Customer cus = new Customer();
+            cus.setTag("555");
+
+            string tag = cus.getTag();
+
+            Assert.AreEqual("555", tag);
+
+
+        }
+
+
     }
 }

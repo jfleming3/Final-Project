@@ -55,6 +55,11 @@ namespace Final_Project
 
         }
 
+        public Customer getf3Cus()
+        {
+            return cus;
+        }
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
