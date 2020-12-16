@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class Form4 : Form
+    public partial class Form4 : Form, IDeerForm
     {
 
         Customer cus = new Customer();

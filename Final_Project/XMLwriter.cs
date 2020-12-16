@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 namespace Final_Project
 {
     [Serializable()]
-   public class XMLwriter
+   public class XMLwriter: IXMLwriter
     {
         public static void write(Customer cus)
         {

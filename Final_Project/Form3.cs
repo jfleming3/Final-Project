@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class Form3 : Form
+    public partial class Form3 : Form, IDeerForm
     {
         public Form3()
         {
