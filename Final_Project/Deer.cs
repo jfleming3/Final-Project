@@ -16,12 +16,8 @@ namespace Final_Project
 
         public string tag;
         public double weight;
-/*
-        public virtual void write(ref TextWriter writer)
-        {
 
-        }
-*/
+       
         public void setTag(string ntag)
         {
             tag = ntag;

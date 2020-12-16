@@ -77,7 +77,7 @@ namespace Final_Project
             Deer buck = new Buck(points,spread,beam);
             buck.setWeight(weight);
             cus.setDeer(buck);
-            BuckXMLwriter.write(cus);
+            XMLwriter.write(cus);
             this.Hide();
             f5.Show();
         }

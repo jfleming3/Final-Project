@@ -26,15 +26,6 @@ namespace Final_Project
         {
         }
 
-       
-        public void write(ref TextWriter writer)
-        {
-            writer.WriteLine("Rack Points", Convert.ToString(rackpoints));
-            writer.WriteLine("Inside Spread", Convert.ToString(inside_spread));
-            writer.WriteLine("mainbeam", Convert.ToString(mainbeam));
-        }
-
-
 
         public void setRack(int rp)
         {

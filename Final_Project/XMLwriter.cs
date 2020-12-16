@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 namespace Final_Project
 {
     [Serializable()]
-    class BuckXMLwriter
+    class XMLwriter
     {
         public static void write(Customer cus)
         {
@@ -20,16 +20,7 @@ namespace Final_Project
 
             XmlSerializer writer = new XmlSerializer(cus.GetType());
             writer.Serialize(xmlWriter, cus);
-            /*
-            xmlWriter.WriteLine("Customer");
-            xmlWriter.WriteLine("Name", cus.getFname() + " " + cus.getLname());
-            xmlWriter.WriteLine("License", cus.getLicense());
-            xmlWriter.WriteLine("Tag", cus.getTag());
-            xmlWriter.WriteLine("Zone", cus.getZone());
-
-            xmlWriter.WriteLine("Buck");
-            xmlWriter.WriteLine("Weight", cus.getDeer().getWeightXML());
-            */
+           
             xmlWriter.Close();
             
         }

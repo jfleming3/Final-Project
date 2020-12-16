@@ -46,7 +46,7 @@ namespace Final_Project
             temp.setWeight(Convert.ToDouble(Weight.Text));
             cus.setDeer(temp);
             this.Hide();
-            DoeXMLWriter.write(cus);
+            XMLwriter.write(cus);
             f5.Show();
 
         }
