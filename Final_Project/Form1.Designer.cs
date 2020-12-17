@@ -219,9 +219,9 @@ namespace Final_Project
             // 
             this.button3.Location = new System.Drawing.Point(13, 382);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(97, 23);
             this.button3.TabIndex = 17;
-            this.button3.Text = "button3";
+            this.button3.Text = "Read from XML";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

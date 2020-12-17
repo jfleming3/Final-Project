@@ -45,6 +45,7 @@
             this.lspread = new System.Windows.Forms.Label();
             this.lweight = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fname
@@ -65,6 +66,7 @@
             this.lname.Size = new System.Drawing.Size(35, 13);
             this.lname.TabIndex = 1;
             this.lname.Text = "label2";
+            this.lname.Click += new System.EventHandler(this.lname_Click);
             // 
             // license
             // 
@@ -84,6 +86,7 @@
             this.tag.Size = new System.Drawing.Size(35, 13);
             this.tag.TabIndex = 3;
             this.tag.Text = "label4";
+            this.tag.Click += new System.EventHandler(this.tag_Click);
             // 
             // label8
             // 
@@ -94,6 +97,7 @@
             this.label8.Size = new System.Drawing.Size(71, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "First Name:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -115,6 +119,7 @@
             this.label10.Size = new System.Drawing.Size(127, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "Hunting License #:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -146,6 +151,7 @@
             this.weight.Size = new System.Drawing.Size(121, 13);
             this.weight.TabIndex = 15;
             this.weight.Text = "Approximate weight:";
+            this.weight.Click += new System.EventHandler(this.weight_Click);
             // 
             // spread
             // 
@@ -202,6 +208,7 @@
             this.lweight.Size = new System.Drawing.Size(35, 13);
             this.lweight.TabIndex = 20;
             this.lweight.Text = "label4";
+            this.lweight.Click += new System.EventHandler(this.lweight_Click);
             // 
             // label1
             // 
@@ -214,12 +221,23 @@
             this.label1.Text = "XML Reader";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(388, 235);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // XMLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(475, 270);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lweight);
             this.Controls.Add(this.lspread);
@@ -239,6 +257,7 @@
             this.Controls.Add(this.fname);
             this.Name = "XMLForm";
             this.Text = "XMLForm";
+            this.Load += new System.EventHandler(this.XMLForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +282,6 @@
         private System.Windows.Forms.Label lspread;
         private System.Windows.Forms.Label lweight;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

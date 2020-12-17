@@ -63,21 +63,20 @@ namespace Final_Project
             {
                 Form3 f3 = new Form3();
                 Deer deerB = new Buck();
-                Customer cus = new Customer(fname, lname, license, tag, zone, deerB);
-
-                // CustomerController control = new CustomerController(cus);
+                Customer cus = new Customer(fname, lname, license, tag, zone, deerB,"Buck");
+                
 
                 f3.cusInfo(cus);
                 this.Hide();
                 f3.Show();
             } else if (DOE.Checked)
             {
-                DOE.Text = "Checked";
+
                 Form4 f4 = new Form4();
                 Deer deerD = new Doe();
-                Customer cus = new Customer(fname, lname, license, tag, zone, deerD);
+                Customer cus = new Customer(fname, lname, license, tag, zone, deerD,"Doe");
 
-                // CustomerController control = new CustomerController(cus);
+
                 f4.cusInfo(cus);
                 this.Hide();
                 f4.Show();
@@ -94,12 +93,22 @@ namespace Final_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
-           Customer cus =  XMLreader.DeSerialize<Customer>("D:\\Users\\jfleming2\\source\\repos\\DeerHarvest\\Final_Project\\XMLFile1.xml");
-            XMLForm fx = new XMLForm();
-            fx.setformcus(cus);
-            this.Hide();
-            fx.Show();
+            // Customer cus = XMLreader.DeSerialize<Customer>("C:\\Users\\tgibbons\\source\\repos\\DeerHarvest\\Final_Project\\XMLFile1.xml");
+            Customer cus =  XMLreader.DeSerialize<Customer>("D:\\Users\\jfleming2\\source\\repos\\DeerHarvest\\Final_Project\\XMLFile1.xml");
+
+            if (cus.getdeertype().Equals("Buck"))
+            {
+                XMLForm fx = new XMLForm();
+                fx.setformcus(cus);
+                this.Hide();
+                fx.Show();
+            }else if (cus.getdeertype().Equals("Doe"))
+            {
+                DoeXMLForm fx = new DoeXMLForm();
+                fx.setformcus(cus);
+                this.Hide();
+                fx.Show();
+            }
         }
     }
 }

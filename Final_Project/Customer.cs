@@ -17,6 +17,7 @@ namespace Final_Project
         public string tag;
         public string zone;
         public Deer deer = new Deer();
+        public string deertype;
         public Customer()
         {
             fname = null;
@@ -25,11 +26,12 @@ namespace Final_Project
             tag = null;
             zone = null;
             deer = null;
+            deertype = null;
             
           
         }
 
-        public Customer(string nfname, string nlname, string nlicense, string ntag, string nzone, Deer ndeer)
+        public Customer(string nfname, string nlname, string nlicense, string ntag, string nzone, Deer ndeer,string deerT)
         {
             fname = nfname;
             lname = nlname;
@@ -37,7 +39,29 @@ namespace Final_Project
             tag = ntag;
             zone = nzone;
             deer = ndeer;
+            deertype = deerT;
 
+        }
+
+
+
+
+        public string getdeertype()
+        {
+            return deertype;
+        }
+
+        public void setdeertype(string type)
+        {
+            if (type.Equals("Doe") || type.Equals("Buck"))
+            {
+                deertype = type;
+            }
+            else
+            {
+                deertype = "Error";
+            }
+            
         }
 
         public string getFname()
