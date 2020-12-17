@@ -19,11 +19,14 @@ namespace Final_Project
 
         public void setformcus(Customer cus)
         {
+            Buck deer = new Buck();
+            deer = (Buck)cus.getDeer();
+            lbeam.Text = deer.getBeam().ToString();
             fname.Text = cus.getFname();
             lname.Text = cus.getLname();
             license.Text = cus.getLicense();
             tag.Text = cus.getTag();
-           // lbeam = cus.get
+            
         }
 
         private void label3_Click(object sender, EventArgs e)

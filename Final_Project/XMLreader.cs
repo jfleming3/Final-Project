@@ -17,8 +17,6 @@ namespace Final_Project
             if (string.IsNullOrEmpty(fileName)) { return default(Customer); }
 
             Customer objectOut = default(Customer);
-
-            
             
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.Load(fileName);
@@ -26,7 +24,6 @@ namespace Final_Project
 
                 using (StringReader read = new StringReader(xmlString))
                 {
-                   
 
                     XmlSerializer serializer = new XmlSerializer(typeof(Customer));
                     using (XmlReader reader = new XmlTextReader(read))
@@ -34,8 +31,6 @@ namespace Final_Project
                         objectOut = (Customer)serializer.Deserialize(reader);
                     }
                 }
-            
-           
 
             return objectOut;
         }
