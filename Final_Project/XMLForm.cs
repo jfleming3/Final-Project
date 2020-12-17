@@ -19,7 +19,11 @@ namespace Final_Project
 
         public void setformcus(Customer cus)
         {
-            label1.Text = cus.getFname();
+            fname.Text = cus.getFname();
+            lname.Text = cus.getLname();
+            license.Text = cus.getLicense();
+            tag.Text = cus.getTag();
+           // lbeam = cus.get
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -33,6 +37,21 @@ namespace Final_Project
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
