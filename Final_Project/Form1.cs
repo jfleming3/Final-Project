@@ -91,5 +91,15 @@ namespace Final_Project
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+           Customer cus =  XMLreader.DeSerialize<Customer>("D:\\Users\\jfleming2\\source\\repos\\DeerHarvest\\Final_Project\\XMLFile1.xml");
+            XMLForm fx = new XMLForm();
+            fx.setformcus(cus);
+            this.Hide();
+            fx.Show();
+        }
     }
 }

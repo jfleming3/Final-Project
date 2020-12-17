@@ -178,6 +178,7 @@
             this.BEAM.Name = "BEAM";
             this.BEAM.Size = new System.Drawing.Size(34, 20);
             this.BEAM.TabIndex = 13;
+            this.BEAM.TextChanged += new System.EventHandler(this.BEAM_TextChanged);
             // 
             // label10
             // 

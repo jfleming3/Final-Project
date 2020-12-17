@@ -47,6 +47,7 @@ namespace Final_Project
             this.label8 = new System.Windows.Forms.Label();
             this.DOE = new System.Windows.Forms.CheckBox();
             this.BUCK = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -214,12 +215,23 @@ namespace Final_Project
             this.BUCK.UseVisualStyleBackColor = true;
             this.BUCK.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(13, 382);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(695, 417);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.BUCK);
             this.Controls.Add(this.DOE);
             this.Controls.Add(this.label8);
@@ -295,6 +307,7 @@ namespace Final_Project
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox DOE;
         private System.Windows.Forms.CheckBox BUCK;
+        private System.Windows.Forms.Button button3;
     }
 }
 

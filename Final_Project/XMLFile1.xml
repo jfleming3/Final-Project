@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Customer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fname>Justin</fname>
+  <lname>Fleming</lname>
+  <license>636363</license>
+  <tag>92646231</tag>
+  <zone>131</zone>
+  -<deer xsi:type="Buck">
+    <weight>170</weight>
+    <rackpoints>10</rackpoints>
+    <inside_spread>17</inside_spread>
+    <mainbeam>9</mainbeam>
+  </deer>
+</Customer>

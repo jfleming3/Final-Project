@@ -86,5 +86,10 @@ namespace Final_Project
             this.Hide();
             f5.Show();
         }
+
+        private void BEAM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
