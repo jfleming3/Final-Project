@@ -30,7 +30,7 @@ namespace Final_Project.Tests
         {
             Form3 f3 = new Form3();
             Deer deer = new Doe();
-            Customer cus = new Customer("Justin","Fleming","555","666","131",deer);
+            Customer cus = new Customer("Justin","Fleming","555","666","131",deer, "Doe");
 
             f3.cusInfo(cus);
 
